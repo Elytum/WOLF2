@@ -138,4 +138,5 @@ void				ft_getcolor(t_env *e);
 void				ft_drawskybox(t_env *e, int ox, int iy);
 void				ft_loop_hit(t_env *e);
 void				ft_draw(t_env *e);
+void				ft_drawfloor2(t_env *e, int y, int t);
 #endif

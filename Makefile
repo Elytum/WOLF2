@@ -12,7 +12,7 @@
 
 # -------------Compilateur------------------#
 CC = cc
-CFLAGS = -Wall -Wextra -Werror -I./includes -I ./libft/includes -I /usr/X11/include -g
+CFLAGS = -Wall -Wextra -Werror -I./includes -I ./libft/includes -I /usr/X11/include -O3
 X11 = -L/usr/X11/lib -lmlx -lXext -lX11
 #--------------Name-------------------------#
 NAME = wolf3d

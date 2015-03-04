@@ -33,7 +33,7 @@ static int	ft_init_env(t_env *e)
 	e->bgy = 0;
 	return (1);
 }
-		
+
 static int	ft_load_textures(t_env *e)
 {
 	if (!(ft_getimg(e, &(*e->text), "imgs/briques.xpm")) ||
@@ -47,7 +47,6 @@ static int	ft_load_textures(t_env *e)
 		!(ft_getimg(e, &(*(e->text + 8)), "imgs/curtain.xpm")) ||
 		!(ft_getimg(e, &(*(e->text + 9)), "imgs/curtain.xpm")))
 		return (0);
-		// dprintf(1, "Sizes = %i %i\n", (*(e->text + 7)).height, (*(e->text + 7)).width,);
 	return (1);
 }
 
