@@ -34,6 +34,7 @@ void		get_map(t_env *e)
 		map[nbl++] = ft_strdup(line);
 		free(line);
 	}
+	free(line);
 	map[nbl] = NULL;
 	close(fd);
 	e->map = map;

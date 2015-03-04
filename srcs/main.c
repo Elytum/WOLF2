@@ -55,13 +55,19 @@ int			main(void)
 	t_env			*e;
 
 	if ((e = (t_env *)ft_memalloc(sizeof(t_env))) == NULL)
+	{
+		write(1, "Error\n", 6);
 		return (0);
+	}
 	get_map(e);
 	if (!(e->mlx = mlx_init()) ||
 		!(e->win = mlx_new_window(e->mlx, WIDTH, HEIGHT, "Wolf-3D")) ||
 		!(e->text = (t_text *)malloc(sizeof(t_text) * 10)) ||
 		!ft_init_env(e) || !ft_load_textures(e))
+	{
+		write(1, "Error\n", 6);
 		return (0);
+	}
 	mlx_expose_hook(e->win, expose_hook, e);
 	mlx_mouse_hook(e->win, ft_click, e);
 	mlx_hook(e->win, 2, 3, ft_updatekey, e);
