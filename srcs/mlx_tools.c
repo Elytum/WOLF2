@@ -64,9 +64,15 @@ int				ft_getimg(t_env *e, t_text *ptr, char *path)
 {
 	if (!(ptr->img = mlx_xpm_file_to_image(e->mlx, path, &(ptr->width),
 		&(ptr->height))))
+	{
 		return (0);
+		write(1, "Error\n", 6);
+	}
 	if (!(ptr->ptr = mlx_get_data_addr (ptr->img, &(ptr->bpp),
 		&(ptr->size_line), &(ptr->endian))))
+	{
 		return (0);
+		write(1, "Error\n", 6);
+	}
 	return (1);
 }
